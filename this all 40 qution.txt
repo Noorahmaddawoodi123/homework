@@ -1,0 +1,678 @@
+# # # #1 class person:
+# # # #     def __init__(self,name,age):
+# # # #         self.name = name
+# # # #         self.age = age
+# # # #         print(F"Name is{self.name},Age:{self.age}")
+# # # # per = person("Noorahamd",20)
+# # # # print(F" name is {per.name} age: {per.age}")
+# # # #______________________________________________
+# # # #2 class person:
+# # # #     def __init__(self,name,age):
+# # # #         self.name = name
+# # # #         self.age = age
+# # # #     def greet(self):
+# # # #         print(F" hello my name is{self.name}")
+# # # # per = person("Noorahmad",30)
+# # # # per.greet()
+# # # #__________________________________________________
+# # # #3class car:
+# # # #     def __init__(self,make,moduel,year):
+# # # #         self.make = make
+# # # #         self.module = moduel
+# # # #         self.year = year
+# # # #     def car_details(self):
+# # # #         print(F" car details: {self.year}  {self.make}  {self.module}")
+# # # # car =car("afghanistan","coursen",2022)
+# # # # car.car_details()
+# # # # 4_____________________________________________________
+# # # # class circle:
+# # # #     def __init__(self,radiu):
+# # # #         self.radiu = radiu
+# # # #         self.p1 = 3.14
+# # # #     def area(self):
+# # # #         area_of = self.p1*self.radiu**2
+# # # #         print(area_of)
+# # # # v1 = circle(5)
+# # # # v1.area()
+# # # # 5_______________________________________
+# # # # class retangle:
+# # # #     def __init__(self,lenght,width):
+# # # #         self.lenght = lenght
+# # # #         self.width = width
+# # # #     def arae(self):
+# # # #         print(self.lenght*self.width)
+# # # #     def perimater(self):
+# # # #        print((self.lenght+self.width)*2)
+# # # # v2 = retangle(4,6)
+# # # # v2.arae()
+# # # # v2.perimater()
+# # #
+# # # #6 inheritance and polymorphism______
+# # # # class animal:
+# # # #     def speak(self):
+# # # #         print("animal speak")
+# # # # class dog(animal):
+# # # #     def speak(self):
+# # # #         print("dog bark")
+# # # # class cat(animal):
+# # # #     def speak(self):
+# # # #         print("cat movee")
+# # # # animals= [dog(),cat()]
+# # # # for x in animals:
+# # # #     x.speak()
+# # # #7___________________________
+# # # # class shape:
+# # # #     def area(self):
+# # # #         pass
+# # # # class squire(shape):
+# # # #     def __init__(self,side):
+# # # #         self.side =side
+# # # #     def area(self):
+# # # #         print(self.side**2)
+# # # # class trangle(shape):
+# # # #     def __init__(self,base,hight):
+# # # #         self.base = base
+# # # #         self.hight = hight
+# # # #     def area(self):
+# # # #         print(self.hight*self.base*0.5)
+# # # # squire1= squire(4)
+# # # # squire1.area()
+# # # # trangle1 = trangle(4,5)
+# # # # trangle1.area()
+# # # #8___________________________________
+# # # # class Employee:
+# # # #     def __init__(self,name,salary):
+# # # #         self.name = name
+# # # #         self.salary = salary
+# # # # class manager(Employee):
+# # # #     def __init__(self,defartment):
+# # # #         self.defartmen = defartment
+# # # #         super().__init__("Noorahmad",2000000)
+# # # #         print(F" your name is :{self.name} and your salary  is :{self.salary} and finally you department is {self.defartmen}")
+# # # # c1 =manager("IT")
+# # # #9________________________________________
+# # # # class vihicle:
+# # # #     def drive(self):
+# # # #         print("ahmad drive")
+# # # # class bike(vihicle):
+# # # #     def drive(self):
+# # # #         print("ahmad dirve bike")
+# # # # class turck(vihicle):
+# # # #     def drive(self):
+# # # #         print("ahmad drive turck")
+# # # # vichile = [bike(),turck()]
+# # # # for x in vichile:
+# # # #     x.drive()
+# # # #10___________________________________
+# # # # class bird:
+# # # #     def fly(self):
+# # # #         print("bird can fly")
+# # # # class eagel(bird):
+# # # #     def fly(self):
+# # # #         print("eagel can fly")
+# # # # class penguin(bird):
+# # # #     def fly(self):
+# # # #         print("penguin can not fly")
+# # # # ply = [eagel(),penguin()]
+# # # # for x in ply:
+# # # #     x.fly()
+# # # #11encupsloutiona and abstraction____________________
+# # # # class account:
+# # # #     def __init__(self,blance):
+# # # #         self.__blance = blance
+# # # #     def deposit(self,money):
+# # # #         self.__blance +=money
+# # # #         print("This is your new blance:",self.__blance)
+# # # #         print("this is add to your blance:",money)
+# # # #     def withdraw(self,money):
+# # # #         if money<=self.__blance:
+# # # #             self.__blance -= money
+# # # #         else:
+# # # #             print("You don have engh money")
+# # # #         print("This is your new blance:",self.__blance)
+# # # #         print("This is withdraw to you blanece:",money)
+# # # #     def get_blance(self):
+# # # #          print("This your now money:",self.__blance)
+# # # #
+# # # # acoon = account(1000)
+# # # # acoon.deposit(500)
+# # # # acoon.withdraw(300)
+# # # # acoon.get_blance()
+# # # #12_____________________________________________
+# # # # class Book:
+# # # #     def __init__(self,title,author,page):
+# # # #         self.__title = title
+# # # #         self.__author =author
+# # # #         self.__page =page
+# # # #     def get_title(self):
+# # # #         print(self.__title)
+# # # #     def set_title(self,title):
+# # # #         self.__title =title
+# # # #     def get_author(self):
+# # # #         print(self.__author)
+# # # #     def set_author(self,author):
+# # # #         self.__author = author
+# # # #     def get_page(self):
+# # # #         print(self.__page)
+# # # #     def set_page(self,page):
+# # # #         self.__page = page
+# # # # boo = Book("New live","Noorahmd",200)
+# # # # boo.get_page()
+# # # # boo.set_page(100)
+# # # # boo.get_page()
+# # # #and more like this
+# # # #13_____________________________________________
+# # # # class laptop:
+# # # #     def __init__(self,brand,model,price):
+# # # #         self.__brand =brand
+# # # #         self.__model = model
+# # # #         self.__price = price
+# # # #         print("This last cost of the computer:",self.__price)
+# # # #     def ply_discount(self,discount):
+# # # #         self.__price -=self.__price*(discount/100)
+# # # #         print("play discount is :",self.__price)
+# # # #     def display_laptop_details(self):
+# # # #         print(F"laptop:{self.__brand} model:{self.__model} ")
+# # # # laptopob = laptop("del","windows",25000)
+# # # # laptopob.ply_discount(30)
+# # # # laptopob.display_laptop_details()
+# # # #14______________________________________________
+# # # # class bankaccount:
+# # # #     def __init__(self,account_number,blance,):
+# # # #         self.__account_number = account_number
+# # # #         self.__blance = blance
+# # # #     def deposite(self,money=0):
+# # # #         self.__blance +=money
+# # # #         print("this is your new blance is:",self.__blance)
+# # # #         print("this money is add your account",money)
+# # # #     def withdraw(self,money=0):
+# # # #         if money<=self.__blance:
+# # # #             self.__blance -=money
+# # # #             print("this is your new blance:",self.__blance)
+# # # #             print('this money is get in your account:',money)
+# # # #         else:
+# # # #             print("you dont have money in your account")
+# # # #     def cheak_blance(self):
+# # # #         print(self.__blance)
+# # # # mmooney = bankaccount(9420,15000)
+# # # # mmooney.deposite()
+# # # # mmooney.withdraw(1000)
+# # # # mmooney.cheak_blance()
+# # # #15___________________
+# class student:
+#     def __init__(self,name,grade,age):
+#         self.__name =name
+#         self.__grade= grade
+#         self.__age = age
+#     def get_name(self):
+#         print(self.__name)
+#     def set_name(self,name):
+#         self.__name =name
+#     def get_grade(self):
+#         print(self.__grade)
+#     def set_grade(self,grade):
+#         self.__grade =grade
+#     def get_age(self):
+#         print(self.__age)
+#     def set_age(self,age):
+#         self.__age = age
+#     def display(self):
+#         print(F"student is :{self.__name} grade :{self.__grade} age :{self.__age}")
+# stu = student("Noorahamd",1,20)
+# stu.display()
+# stu.get_name()
+# stu.set_name("dawoodi")
+# stu.get_name()
+# ,16_____________________________
+# class library:
+#     def __init__(self,name):
+#         self.name  = name
+#         self.books = []
+#     def add_book(self,book):
+#         self.books.append(book)
+#     def removed_book(self,book):
+#         if book in self.books:
+#             self.books.remove(book)
+#             print(book)
+#             print("This is new list",self.books)
+#         else:
+#             print(F"book in not in the list:{book}")
+# object = library("kahn")
+# object.add_book("math")
+# object.add_book("python")
+# object.add_book("linear algebra")
+# print("This book is removed")
+# object.removed_book("python")
+#17
+# class school:
+#     def __init__(self,name):
+#         self.name = name
+#         self.students =[]
+#     def add(self,student):
+#         self.students.append(student)
+#     def remove(self,studnet):
+#         if studnet in self.students:
+#             self.students.remove(studnet)
+#             print(self.students)
+#             print("This name is removed in the list: ",studnet)
+#         else:
+#             print("this name is not define in the list",studnet)
+# object = school("Noorahmad")
+# object.add("noori")
+# object.add("dawoodi")
+# object.add("kahn")
+# object.add("walli")
+# object.remove("walli")
+#18_______________________
+# class Team:
+#     def __init__(self,name):
+#         self.name = name
+#         self.members = []
+#     def add(self,member):
+#         self.members.append(member)
+#     def remove(self,member):
+#         if member in self.members:
+#             self.members.remove(member)
+#             print(self.members)
+#             print("This name is removed in the list: ",member)
+#         else:
+#             print("This name is not in the list :",member)
+# te=Team("cricket")
+# te.add("kahn")
+# te.add("jan")
+# te.add("gull")
+# te.add("baba")
+# te.remove("baba")
+#19____________________________
+# class companey:
+#     def __init__(self,name):
+#         self.name =  name
+#         self.Employee = []
+#     def add_Employee(self,employee):
+#         self.Employee.append(employee)
+#     def remove_Employee(self,employee):
+#         if employee in self.Employee:
+#             self.Employee.remove(employee)
+#             print(self.Employee)
+#             print("this name is removed in list :",employee)
+# obj = companey("Noori")
+# obj.add_Employee("khan")
+# obj.add_Employee("gull")
+# obj.add_Employee("lala")
+# obj.remove_Employee("lala")
+#20__________________________
+# class Zoo:
+#     def __init__(self,name):
+#         self.name = name
+#         self.animals = []
+#     def add_animal(self,animal):
+#         self.animals.append(animal)
+#     def remove_animal(self,animal):
+#         if animal in self.animals:
+#             self.animals.remove(animal)
+#             print(self.animals)
+#             print("This name is removed: ",animal)
+# object = Zoo("kabul zoo")
+# object.add_animal("duck")
+# object.add_animal("Gow")
+# object.add_animal("cat")
+# object.remove_animal("cat")
+# #21__________________________
+# # class filemanager:
+# #     def red_file(self):
+# #         x =input("Enter your file name:")
+# #         y = open(x,"r")
+# #         for x in y:
+# #             print(x)
+# #     def write_file(self):
+# #         x = input("Enter your file to write something")
+# #         y = open(x, "w")
+# #         y.write("This is new writhing for this page")
+# #         print(y)
+# # v1 =filemanager()
+# # v1.red_file()
+# # v1.write_file()
+# #22____________________________________
+# class log:
+#     def show(self):
+#         try:
+#             text = open("C:/Users/Noorahmad/Desktop/khan.ger", mode="r")
+#             print(text)
+#         except FileNotFoundError:
+#             print("you cna not efielru aieraier")
+# log = log()
+# log.show()
+#22_________________________
+# class log:
+#     def Write_error_message(self):
+#         text = open("C:/Users/Noorahmad/Desktop/khan.txt",mode="w")
+#         print(text.write("you can not input to user"))
+# eir= log()
+# eir.Write_error_message()
+# 23___________________________
+# class configure_file:
+#     def read_file(self,file_path):
+#         self.file_path = file_path
+#         with open(file_path,"r")as file:
+#             self.data =file.read()
+#     def setting(self,content,k,new_value):
+#         content =self.data
+#         analiyze = content.split(maxsplit=12)
+#         for equal in analiyze:
+#             if equal == "=":
+#                 analiyze.remove("=")
+#         even_number = 0
+#         keys = []
+#         for key in analiyze:
+#             if even_number %2==0:
+#                 keys.append(key)
+#             even_number+=1
+#         odd_number=0
+#         values =[]
+#         for value in analiyze:
+#             if odd_number%2!=0:
+#                 values.append(value)
+#             odd_number +=1
+#         zipped =zip(keys,values)
+#         dictionary = dict(zipped)
+#         dictionary[k]=new_value
+#         #print(dictionary)
+#         with open(self.file_path,"w")as file:
+#             for ke,val in dictionary.items():
+#                 file.write(F"{ke} = {val}\n")
+# config = configure_file()
+# config.read_file("C:/Users/Noorahmad/Desktop/gull.txt")
+# config.setting("C:/Users/Noorahmad/Desktop/gull.txt","name","Dawoodi")
+# config.setting("C:/Users/Noorahmad/Desktop/gull.txt","Last_name ","janana")
+#25____________________________________
+# class report:
+#     def generate_report(self):
+#         try:
+#             x = open("C:/Users/Noorahmad/Desktop/khan.tx")
+#             print(x.read())
+#         except FileNotFoundError:
+#             print('You can not access to this file')
+# v1 = report()
+# v1.generate_report()
+#26real word application ex_________________________
+# class Tiket:
+#     def __init__(self,movie_name,set_number,price):
+#         self.movie_name =movie_name
+#         self.set_number= set_number
+#         self.price = price
+#     def display_ticket(self):
+#         print(F"Move name:{self.movie_name} and set_of_chair: {self.set_number} and price: {self.price}")
+#     def apply_dicount(self,percentage):
+#         self.price -=self.price*(percentage/100)
+#         print("Discount:",self.price)
+# ve = Tiket("islimacmovie",20,250)
+# ve.display_ticket()
+# ve.apply_dicount(30)
+#27_____________________________
+# class Item:
+#     def __init__(self,name,price):
+#         self.name = name
+#         self.price = price
+# class shopping_cart:
+#     def __init__(self):
+#         self.items = []
+#     def add_item(self,item):
+#         self.items.append(item)
+#     def remove_item(self,item_name):
+#         for item in self.items:
+#             if item_name ==item_name:
+#                 self.items.remove(item)
+#         print("This item is removed:",item_name)
+#     def display_item(self):
+#         for item in self.items:
+#             print(F"Item:{item.name} ,price:{item.price:.2f}")
+# print("This item is added")
+# item1 =Item("Apple",1)
+# item2 = Item("Banana",5)
+# item3 = Item("Milk",10)
+# cart = shopping_cart()
+# cart.add_item(item1)
+# cart.add_item(item2)
+# cart.add_item(item3)
+# cart.display_item()
+# cart.remove_item("Banana")
+# cart.display_item()
+#28____________________________
+# class Item:
+#     def __init__(self,name,price):
+#         self.name = name
+#         self.price =price
+# class Restaurant:
+#     def __init__(self,name):
+#         self.name = name
+#         self.menu = []
+#     def add_item(self,item):
+#         self.menu.append(item)
+#     def remove_item(self,item_name):
+#         for item in self.menu:
+#             if item_name==item_name:
+#                 self.menu.remove(item)
+#         print("This item is removed:",item_name)
+#     def display_menu(self):
+#         for item in self.menu:
+#             print(F"item:{item.name} ,price:{item.price:.2f}")
+# print("this item is added")
+# item = Item("pastza",200)
+# item1 = Item("stack",100)
+# item2 = Item("salad",20)
+# restaurant =Restaurant("Kanduze kaba")
+# restaurant.add_item(item)
+# restaurant.add_item(item1)
+# restaurant.add_item(item2)
+# restaurant.display_menu()
+# restaurant.remove_item("pastza")
+# restaurant.display_menu()
+#29___________________________
+# class person:
+#     def __init__(self,name,age):
+#         self.name = name
+#         self.age = age
+# class Flight:
+#     def __init__(self,flight_number,destination):
+#         self.flight_number = flight_number
+#         self.distination =destination
+#         self.pasenger =[]
+#     def add_passenger(self,person):
+#         self.pasenger.append(person)
+#     def remove_passenger(self,person_name):
+#         for person in self.pasenger:
+#             if person.name==person_name:
+#                 self.pasenger.remove(person)
+#         print("This person is removed:",person_name)
+#     def display_passanger(self):
+#         for person in self.pasenger:
+#             print(F"person :{person.name},age : {person.age}")
+# person1 =person("ahmad",30)
+# person2 = person("jan", 20)
+# person3 = person("Gull", 15)
+# flight = Flight("FGR34","Kabul")
+# flight.add_passenger(person1)
+# flight.add_passenger(person2)
+# flight.add_passenger(person3)
+# flight.display_passanger()
+# flight.remove_passenger("Gull")
+# flight.display_passanger()
+#30_______________________________
+# class Room:
+#     def __init__(self,room_number):
+#         self.room_number =room_number
+#         self.is_capture=False
+# class Hotel:
+#     def __init__(self,name):
+#         self.name =name
+#         self.rooms =[]
+#     def add_room(self,room):
+#         self.rooms.append(room)
+#     def book_roo(self,room_number):
+#         for room in self.rooms:
+#             if room.room_number==room_number:
+#                 if not room.is_capture:
+#                     room.is_capture =True
+#     def checkout_Room(self,room_number):
+#         for room in self.rooms:
+#             if room.is_capture:
+#                 room.is_capture=False
+#     def display_room(self):
+#         for room in self.rooms:
+#             print(self.rooms)
+#
+# room1 =Room(400)
+# room2 =Room(401)
+# room3 = Room(402)
+# object =Hotel("noorahmad")
+# object.add_room(room1)
+# object.add_room(room2)
+# object.add_room(room3)
+# object.display_room()
+#35tikinter_program__________________________
+# from tkinter import *
+# class counterAPP:
+#     def __init__(self,windo):
+#         self.conter=0
+#         self.Label=Label(windo,text="Conter:0",font=("Helvetica",20))
+#         self.Label.pack(pady=20)
+#         self.increment_button = Button(windo,text="Increment",fg="green",width=15,font=("Arial",15),command=self.increment)
+#         self.increment_button.pack(pady=10)
+#         self.decrement_button =Button(windo,text="Decrement",fg="red",width=15,font=("Arial",15),command=self.decrement)
+#         self.decrement_button.pack(pady=10)
+#     def increment(self):
+#         self.conter+=1
+#         self.update_Label()
+#     def decrement(self):
+#         self.conter-=1
+#         self.update_Label()
+#     def update_Label(self):
+#         self.check()
+#         self.Label.config(text=F"counter: {self.conter}")
+#     def check(self):
+#         if self.conter<0:
+#             self.Label.config(fg="red")
+#         elif self.conter>0:
+#             self.Label.config(fg="green")
+#         else:
+#             self.Label.config(fg="black")
+# if __name__=="__main__":
+#     window =Tk()
+#     window.title("Counter APP")
+#     window.geometry("300x300")
+#     app =counterAPP(window)
+#     window.mainloop()
+#37____________________
+# from tkinter import *
+# class ToDoapp:
+#     def __init__(self,window):
+#         self.entry = Entry(window)
+#         self.entry.pack()
+#         self.List = Listbox(window,width=30)
+#         self.List.pack()
+#         self.add_button =Button(window,text="Add_task",width=12,command=self.add_task)
+#         self.add_button.pack()
+#         self.remove_button = Button(window,text="Remove_Task",width=12,command=self.remove_task)
+#         self.remove_button.pack()
+#     def add_task(self):
+#         if not self.entry.get()=="":
+#             self.List.insert(END,self.entry.get())
+#     def remove_task(self):
+#         self.List.delete(END)
+# if __name__=="__main__":
+#     window =Tk()
+#     window.title("ToDApp")
+#     app = ToDoapp(window)
+#     window.mainloop()
+#38____________________________
+# import tkinter as tk
+# class Calculator:
+#     def __init__(self,root):
+#         self.root =root
+#         self.root.title("Calaculator")
+#         self.create_widgets()
+#     def create_widgets(self):
+#         self.display = tk.Entry(self.root,font=("Arial",24),borderwidth=1,relief="solid")
+#         self.display.grid(row=0,column=0,columnspan=4,sticky="nsew")
+#         buttons =[
+#             ("AC",1,0),("()",1,1),("%",1,2),("?/",1,3),
+#             ("7",2,0),("8",2,1),("9",2,2),("x",2,3),
+#             ("4",3,0),('5',3,1),('6',3,2),("-",3,3),
+#             ("1",4,0),("2",4,1),("3",4,2),("+",4,3),
+#             ("0",5,0),(".",5,1),("XX",5,2),("=",5,3)]
+#         for (text,row,column) in buttons:
+#             self.create_button(text,row,column)
+#         for i in range(6):
+#             self.root.grid_rowconfigure(i,weight=2)
+#         for j in range(4):
+#             self.root.grid_columnconfigure(j,weight=1)
+#     def create_button(self,text,row,column):
+#         button = tk.Button(self.root, text=text, font=("Arial", 18), command=lambda t=text: self.on_button_click(t))
+#         button.grid(row=row, column=column, sticky="nsew")
+#     def on_button_click(self,char):
+#         if char=="AC":
+#             self.display.delete(0,tk.END)
+#         elif char=="XX":
+#             current_text =self.display.get()
+#             self.display.delete(0,tk.END)
+#             self.display.insert(0,current_text[:-1])
+#         elif char=="=":
+#             try:
+#                 expression =self.display.get().replace("x","*").replace("%","/")
+#                 result =eval(expression)
+#                 self.display.delete(0,tk.END)
+#                 self.display.insert(0,result)
+#             except Exception as e:
+#                 self.display.delete(0,tk.END)
+#                 self.display.insert(0,"Error")
+#         else:
+#             self.display.insert(tk.END,char)
+# root = tk.Tk()
+# calculator = Calculator(root)
+# root.mainloop()
+#39____________________
+# import tkinter as tk
+# from tkinter import messagebox
+# class LoginApp:
+#     def __init__(self,root):
+#         self.root =root
+#         self.root.title = ("login App")
+#         self.label_username=tk.Label(root,text="user_name")
+#         self.label_username.pack(pady=5)
+#         self.entry_username=tk.Entry(root)
+#         self.entry_username.pack(pady=5)
+#         self.label_passwod=tk.Label(root,text="password")
+#         self.label_passwod.pack(pady=5)
+#         self.entry_password = tk.Entry(root,show="*")
+#         self.entry_password.pack(pady=5)
+#         self.login_button = tk.Button(root,text="login",command=self.login)
+#         self.login_button.pack(pady=20)
+#     def login(self):
+#         username=self.entry_username.get()
+#         password=self.entry_password.get()
+#         if username=="Noorahmad" and password=="1234":
+#             messagebox.showinfo("login success","welcome, Noorahmad")
+#         else:
+#             messagebox.showerror("Login Error","Invalid username or password")
+# if __name__=="__main__":
+#     root = tk.Tk()
+#     app =LoginApp(root)
+#     root.mainloop()
+#40_____________________________________
+# import tkinter as tk
+# from tkinter import messagebox
+# class weatherapp:
+#     def __init__(self,root):
+#         self.root =root
+#         self.root.title("Weather App")
+#         self.api_key = "YOUR_API_KEY"
+#         self.Label_city = tk.Label(root,text="City")
+#         self.Label_city.pack()
+#         self.entry_city = tk.Entry(root)
+#         self.entry_city.pack()
+#         self.button_get_weather=tk.Button(root,text="Get Weather",command=self.get_weaher)
+#         self.button_get_weather.pack()
+#         self.Label_weather_info=tk.Label(root,text="",compound=self.get_weather)
+#         self.button_get_weather.pack()
+#         self.Label_weather_info = tk.Label(root,text="",font=("Helvetice",12))
+#         self.Label_weather_info.pack()
